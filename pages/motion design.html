@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>motion design</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+  
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+    
+<!-- navbar section starts  -->
+
+<nav class="navbar">
+    <a href="../index.html"> <i class="fas fa-home"></i> <span>Home</span> </a>
+    <a href="../portfolio.html"> <i class="fas fa-briefcase"></i> <span>Portfolio</span> </a>
+    <a href="../contact.html"> <i class="fas fa-address-book"></i> <span>Contact</span> </a>
+</nav>
+
+<!-- navbar section ends -->
+
+<!-- home section starts  -->
+
+<section class="home1">
+
+    <div class="image">
+        <img src="../images/motion design.png" alt="">
+    </div>
+
+    <div class="content">
+       <h3> MOTION DESIGN CA</h3>
+        <span>Watch Out Motion Design</span>
+        <p>The course assignment involves the creation of an amazing motion
+design of our choice that could impress potential employers and
+clients. We asked to develop the full motion design from concept to
+export taking into consideration all the lessons learned from the
+following module assignments:
+<br>1. How to create a concept and rough sketches of the motion
+design project
+<br>2. How to create illustration of the idea and concept of the
+motion design project
+<br>3. How to create a storyboard of all the illustrations of the motion
+design project
+<br>4. How to create effects and keyframing on motion design
+project
+<br>5. How to animate the motion design project
+For this course assignment and using all the skills gain from the
+above-mentioned lesson module, I decided to create a motion
+design to show the danger that can occur when people lack
+concentration and pay less attention when they walk in public
+space. The title of my motion design is Watch Out!! </p>
+        <a href="https://youtu.be/aqLtk5Y0Hew" class="btn">Youtube Link <i class="fas fa-user"></i> </a>
+    </div>
+
+</section>
+
+<!-- home section ends -->
+	
+ 
+
+<!-- partial:index.partial.html -->
+
+<div class="slider" x-data="{start: true, end: false}">
+  <div class="slider__content" x-ref="slider" x-on:scroll.debounce="$refs.slider.scrollLeft == 0 ? start = true : start = false; Math.abs(($refs.slider.scrollWidth - $refs.slider.offsetWidth) - $refs.slider.scrollLeft) < 5 ? end = true : end = false;">
+    <div class="slider__item">
+      <img class="slider__image" src="../images/motion 1.jpg" alt="Image">
+    </div>
+    
+   
+
+    <div class="slider__item">
+      <img class="slider__image" src="../images/motion 2.png" alt="Image">
+      
+    </div>
+
+ 
+  <div class="slider__item">
+      <img class="slider__image" src="../images/motion 4.jpg" alt="Image">
+      
+   
+    
+   
+  
+    
+	  
+		
+  
+		
+	
+		   
+ 
+      
+   
+	
+     
+		
+    </div>
+  </div>
+  <div class="slider__nav">
+    <button class="slider__nav__button" x-on:click="$refs.slider.scrollBy({left: $refs.slider.offsetWidth * -1, behavior: 'smooth'});" x-bind:class="start ? '' : 'slider__nav__button--active'">Previous</button>
+    <button class="slider__nav__button" x-on:click="$refs.slider.scrollBy({left: $refs.slider.offsetWidth, behavior: 'smooth'});" x-bind:class="end ? '' : 'slider__nav__button--active'">Next</button>
+  </div>
+</div>
+	
+	
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.10.2/cdn.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
+
